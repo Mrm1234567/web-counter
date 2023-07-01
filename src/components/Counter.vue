@@ -8,21 +8,21 @@
   <div v-if="loaded" class="w-[100vw] h-[100vh]">
     <div class="video-container">
 
-      <video class="background-video" v-if="displayHours <= 72" autoplay loop muted> 
+      <video class="background-video fit-width" v-if="displayHours <= 72" autoplay loop muted> 
         <!-- Place here the Phase 4 vide link -->
-        <source src="../assets/videos/Phase4.mkv" type="video/mp4" />
+        <source src="../assets/videos/Phase4.mp4" type="video/mp4" />
       </video>
-      <video class="background-video" v-else-if="displayHours <= 168" autoplay loop muted>
+      <video class="background-video fit-width" v-else-if="displayHours <= 168" autoplay loop muted>
         <!-- Place here the Phase 3 vide link -->
-        <source src="../assets/videos/Phase3.mkv" type="video/mp4" />
+        <source src="../assets/videos/Phase3.mp4" type="video/mp4" />
       </video>
-      <video class="background-video" v-else-if="displayHours <= 480" autoplay loop muted>
+      <video class="background-video fit-width" v-else-if="displayHours <= 480" autoplay loop muted>
         <!-- Place here the Phase 2 vide link -->
-        <source src="../assets/videos/Phase2.mkv" type="video/mp4" />
+        <source src="../assets/videos/Phase2.mp4" type="video/mp4" />
       </video>
-      <video class="background-video" v-else-if="displayHours > 480" autoplay loop muted>
+      <video class="background-video fit-width" v-else-if="displayHours > 480" autoplay loop muted>
         <!-- Place here the Phase 1 vide link -->
-        <source src="../assets/videos/Phase1.mkv" type="video/mp4" />
+        <source src="../assets/videos/Phase1.mp4" type="video/mp4" />
       </video>
       <div class="text-overlay">
         <div class="text-base flex justify-center content-center mx-auto text-center text-white">
@@ -59,9 +59,9 @@
   </div>
   <div v-else class="w-[100vw] h-[100vh]">
     <div class="video-container">
-      <video class="background-video" v-if="displayHours <= 0" autoplay loop muted>
+      <video class="background-video fit-width" v-if="displayHours <= 0" autoplay loop muted>
         <!-- Place here the Post vide link -->
-        <source src="../assets/videos/Postlaunchtransition.mkv" type="video/mp4" />
+        <source src="../assets/videos/Postlaunchtransition.mp4" type="video/mp4" />
       </video>
       <div class="text-overlay">
         <div v-if="displayHours <= 0" class="flex flex-col justify-center content-center mx-auto text-center text-white">

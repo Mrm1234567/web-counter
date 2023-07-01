@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
