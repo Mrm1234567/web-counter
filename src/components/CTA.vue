@@ -10,6 +10,7 @@
 import { ref } from "vue"
 
 const url = ref("http://www.firo.org")
+
 </script>
 
 <style lang="scss" scoped></style>

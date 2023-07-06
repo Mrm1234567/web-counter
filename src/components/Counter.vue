@@ -26,19 +26,70 @@
       </video>
       <div class="text-overlay">
         <div class="text-base flex justify-center content-center mx-auto text-center text-white">
-          <span v-if="displayHours <= 72" class="font-bold  saira-font">
-            IGNITING A NEW ERA OF PRIVACY
+          <span v-if="displayHours <= 72" class="font-bold tracking-wide text-slate-100 saira-font">
+            IGNITING A NEW ERA OF PRIVACY {{displayHours}} 4
           </span>
-          <span v-else-if="displayHours <= 168" class="font-semibold  saira-font">
-            IGNITING A NEW ERA OF PRIVACY
+          <span v-else-if="displayHours <= 168" class="font-semibold tracking-wide text-slate-200 font-saira-semi-condensed">
+            IGNITING A NEW ERA OF PRIVACY {{displayHours}} 3
           </span>
-          <span v-else-if="displayHours <= 480" class="font-normal  saira-font">
-            IGNITING A NEW ERA OF PRIVACY
+          <span v-else-if="displayHours <= 480" class="font-normal tracking-wide text-slate-300 font-saira-semi-condensed">
+            IGNITING A NEW ERA OF PRIVACY {{displayHours}} 2
           </span>
-          <span v-else-if="displayHours > 480" class="font-thin saira-font">IGNITING A NEW ERA OF PRIVACY</span>
+          <span v-else-if="displayHours > 480" class="font-thin tracking-wide text-slate-300 font-saira-semi-condensed">IGNITING A NEW ERA OF PRIVACY {{displayHours}} 1</span>
           <span v-else></span>
         </div>
-        <div class="flex justify-center items-center source-sans-font content-center text-white font-bold pt-32">
+        <div v-if="displayHours <= 72" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
+          <div class="hours mr-2 relative">
+            {{ displayHours }}
+            <div class="label text-sm absolute bottom-0"></div>
+          </div>
+          <span class="leading-snug">:</span>
+          <div class="minutes  mx-2 relative">
+            {{ displayMinutes }}
+            <div class="label text-sm absolute bottom-0"></div>
+          </div>
+          <span class="leading-snug">:</span>
+          <div class="seconds  mx-2 relative">
+            {{ displaySeconds }}
+            <div class="label text-sm absolute bottom-0"></div>
+          </div>
+        </div>
+
+        <div v-else-if="displayHours <= 168" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
+          <div class="hours mr-2 relative">
+            {{ displayHours }}
+            <div class="label text-sm absolute bottom-0"></div>
+          </div>
+          <span class="leading-snug">:</span>
+          <div class="minutes  mx-2 relative">
+            {{ displayMinutes }}
+            <div class="label text-sm absolute bottom-0"></div>
+          </div>
+          <span class="leading-snug">:</span>
+          <div class="seconds  mx-2 relative">
+            {{ displaySeconds }}
+            <div class="label text-sm absolute bottom-0"></div>
+          </div>
+        </div>
+
+        <div v-else-if="displayHours <= 480" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
+          <div class="hours mr-2 relative">
+            {{ displayHours }}
+            <div class="label text-sm absolute bottom-0"></div>
+          </div>
+          <span class="leading-snug">:</span>
+          <div class="minutes  mx-2 relative">
+            {{ displayMinutes }}
+            <div class="label text-sm absolute bottom-0"></div>
+          </div>
+          <span class="leading-snug">:</span>
+          <div class="seconds  mx-2 relative">
+            {{ displaySeconds }}
+            <div class="label text-sm absolute bottom-0"></div>
+          </div>
+        </div>
+
+        <div v-else-if="displayHours > 480" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
             <div class="label text-sm absolute bottom-0"></div>
@@ -64,7 +115,7 @@
         <source src="../assets/videos/Postlaunchtransition.mp4" type="video/mp4" />
       </video>
       <div class="text-overlay">
-        <div v-if="displayHours <= 0" class="flex flex-col justify-center content-center mx-auto text-center text-white">
+        <div v-if="displayHours < 0" class="flex flex-col justify-center content-center mx-auto text-center text-white">
             <div class="font-bold spark">
               SPARK IS <br> LAUNCHED!
             </div>

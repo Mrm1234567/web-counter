@@ -2,11 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200&display=swap');
 
-.saira-font {
-  font-family: 'Saira Semi Condensed';
-  font-size: 20px;
-}
 
 .spark {
   font-family: 'Saira Semi Condensed';
@@ -16,7 +13,8 @@
 
 
 .source-sans-font {
-  font-family: 'Source Sans Pro';
+  /* font-family: 'Source Sans Pro'; */
+  font-family: 'Saira Semi Condensed', sans-serif;
   font-size: 100px;
   font-weight: 600;
 }
@@ -81,7 +79,7 @@ a,
 }
 
 video {
-  max-width: 250vh;
+  max-width: 100%;
   height: auto;
 }
 
@@ -89,9 +87,7 @@ video {
   video {
     max-width: 170vh !important;
   }
-  .saira-font {
-    font-size: 15px;
-  }
+
   .spark {
     font-size: 30px !important;
     line-height: 30px !important;
@@ -106,9 +102,7 @@ video {
   video {
     max-width: 180vh !important;
   }
-  .saira-font {
-    font-size: 18px;
-  }
+
   
   .source-sans-font {
     font-size: 75px;
