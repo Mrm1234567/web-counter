@@ -8,37 +8,37 @@
   <div v-if="loaded" class="w-[100vw] h-[100vh]">
     <div class="video-container">
 
-      <video class="background-video fit-width" v-if="displayHours <= 72" autoplay loop muted> 
+      <video class="background-video fit-width" v-if="displaySeconds <= 30" autoplay muted  @ended="die"> 
         <!-- Place here the Phase 4 vide link -->
-        <source src="../assets/videos/Phase4.mp4" type="video/mp4" />
+        <source src="../assets/videos/Phase4.mp4" type="video/mp4">
       </video>
-      <video class="background-video fit-width" v-else-if="displayHours <= 168" autoplay loop muted>
+      <video class="background-video fit-width" v-else-if="displaySeconds <= 40" autoplay loop muted>
         <!-- Place here the Phase 3 vide link -->
         <source src="../assets/videos/Phase3.mp4" type="video/mp4" />
       </video>
-      <video class="background-video fit-width" v-else-if="displayHours <= 480" autoplay loop muted>
+      <video class="background-video fit-width" v-else-if="displaySeconds <= 50" autoplay loop muted>
         <!-- Place here the Phase 2 vide link -->
         <source src="../assets/videos/Phase2.mp4" type="video/mp4" />
       </video>
-      <video class="background-video fit-width" v-else-if="displayHours > 480" autoplay loop muted>
+      <video class="background-video fit-width" v-else-if="displaySeconds > 50" autoplay loop muted>
         <!-- Place here the Phase 1 vide link -->
         <source src="../assets/videos/Phase1.mp4" type="video/mp4" />
       </video>
       <div class="text-overlay">
         <div class="text-base flex justify-center content-center mx-auto text-center text-white">
-          <span v-if="displayHours <= 72" class="font-bold tracking-wide text-slate-100 saira-font">
-            IGNITING A NEW ERA OF PRIVACY {{displayHours}} 4
+          <span v-if="displaySeconds <= 30" class="font-bold tracking-wide text-slate-100 saira-font">
+            IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} 4
           </span>
-          <span v-else-if="displayHours <= 168" class="font-semibold tracking-wide text-slate-200 font-saira-semi-condensed">
-            IGNITING A NEW ERA OF PRIVACY {{displayHours}} 3
+          <span v-else-if="displaySeconds <= 40" class="font-semibold tracking-wide text-slate-200 font-saira-semi-condensed">
+            IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} 3
           </span>
-          <span v-else-if="displayHours <= 480" class="font-normal tracking-wide text-slate-300 font-saira-semi-condensed">
-            IGNITING A NEW ERA OF PRIVACY {{displayHours}} 2
+          <span v-else-if="displaySeconds <= 50" class="font-normal tracking-wide text-slate-300 font-saira-semi-condensed">
+            IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} 2
           </span>
-          <span v-else-if="displayHours > 480" class="font-thin tracking-wide text-slate-300 font-saira-semi-condensed">IGNITING A NEW ERA OF PRIVACY {{displayHours}} 1</span>
+          <span v-else-if="displaySeconds > 50" class="font-thin tracking-wide text-slate-300 font-saira-semi-condensed">IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} 1</span>
           <span v-else></span>
         </div>
-        <div v-if="displayHours <= 72" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
+        <div v-if="displaySeconds <= 30" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
             <div class="label text-sm absolute bottom-0"></div>
@@ -50,12 +50,12 @@
           </div>
           <span class="leading-snug">:</span>
           <div class="seconds  mx-2 relative">
-            {{ displaySeconds }}
+            {{ displaySeconds }} 4
             <div class="label text-sm absolute bottom-0"></div>
           </div>
         </div>
 
-        <div v-else-if="displayHours <= 168" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
+        <div v-else-if="displaySeconds <= 40" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
             <div class="label text-sm absolute bottom-0"></div>
@@ -67,12 +67,12 @@
           </div>
           <span class="leading-snug">:</span>
           <div class="seconds  mx-2 relative">
-            {{ displaySeconds }}
+            {{ displaySeconds }} 3
             <div class="label text-sm absolute bottom-0"></div>
           </div>
         </div>
 
-        <div v-else-if="displayHours <= 480" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
+        <div v-else-if="displaySeconds <= 50" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
             <div class="label text-sm absolute bottom-0"></div>
@@ -84,12 +84,12 @@
           </div>
           <span class="leading-snug">:</span>
           <div class="seconds  mx-2 relative">
-            {{ displaySeconds }}
+            {{ displaySeconds }} 2
             <div class="label text-sm absolute bottom-0"></div>
           </div>
         </div>
 
-        <div v-else-if="displayHours > 480" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
+        <div v-else-if="displaySeconds > 50" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
             <div class="label text-sm absolute bottom-0"></div>
@@ -101,7 +101,7 @@
           </div>
           <span class="leading-snug">:</span>
           <div class="seconds  mx-2 relative">
-            {{ displaySeconds }}
+            {{ displaySeconds }} 1
             <div class="label text-sm absolute bottom-0"></div>
           </div>
         </div>
@@ -110,12 +110,33 @@
   </div>
   <div v-else class="w-[100vw] h-[100vh]">
     <div class="video-container">
-      <video class="background-video fit-width" v-if="displayHours <= 0" autoplay loop muted>
-        <!-- Place here the Post vide link -->
+        <div id="1">
+        <video class="background-video post-video fit-width" autoplay muted @ended="videoEnded">
+          <!-- Place here the Post vide link -->
+          <source src="../assets/videos/Postlaunchtransition.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div id="2" v-if="postVideo">
+        <video class="background-video fit-width" autoplay loop muted>
+          <!-- Place here the Post vide link -->
+          <source src="../assets/videos/Postlaunchtransition.mp4" type="video/mp4" />
+        </video>
+        <div class="text-overlay">
+          <div class="flex flex-col justify-center content-center mx-auto text-center text-white">
+            <div class="font-bold spark">
+              SPARK IS <br> LAUNCHED!
+            </div>
+            <div>
+              <CTA />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <video class="background-video fit-width" autoplay loop muted>
         <source src="../assets/videos/Postlaunchtransition.mp4" type="video/mp4" />
       </video>
       <div class="text-overlay">
-        <div v-if="displayHours < 0" class="flex flex-col justify-center content-center mx-auto text-center text-white">
+        <div class="flex flex-col justify-center content-center mx-auto text-center text-white">
             <div class="font-bold spark">
               SPARK IS <br> LAUNCHED!
             </div>
@@ -123,7 +144,7 @@
               <CTA />
             </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -138,6 +159,9 @@ export default {
     displayMinutes: 0,
     displaySeconds: 0,
     loaded: false,
+    postVideo: false,
+    test: false,
+    
   }),
   computed: {
     _seconds: () => 1000,
@@ -168,9 +192,17 @@ export default {
         const now = new Date();
         //const end = new Date(2023, 6, 20, 12, 0, 0);
         const distance = this.end.getTime() - now.getTime();
-        if (distance < 0) {
+        // if (distance < 0) {
+        if (this.test) {
+          console.log('fjjfjf');
           //4th phase
           clearInterval(timer);
+          this.loaded = false;
+
+          document.getElementById("2").style.display = "none";
+
+          const video1 = document.getElementsByClassName("post-video");
+          videoEnded();
           return; //add animation
         }
         const hours = Math.floor(distance / this._hours);
@@ -182,6 +214,14 @@ export default {
         this.loaded = true;
       }, 1000);
     },
+    videoEnded() {
+    this.postVideo = true;
+    document.getElementById("1").style.display = "none";
+    document.getElementById("2").style.display = "block";
+  },
+  die() {
+    this.test = true;
+  },
   },
 };
 </script>
