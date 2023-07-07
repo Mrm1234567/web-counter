@@ -25,83 +25,83 @@
         <source src="../assets/videos/Phase1.mp4" type="video/mp4" />
       </video>
       <div class="text-overlay">
-        <div class="text-base flex justify-center content-center mx-auto text-center text-white">
-          <span v-if="displaySeconds <= 30" class="font-bold tracking-wide text-slate-100 saira-font">
-            IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} 4
+        <div class="text-base flex justify-center content-center mx-auto text-center pt">
+          <span v-if="displaySeconds <= 30" class="font-extrabold tracking-widest text-slate-100 saira-font">
+            IGNITING A NEW ERA OF PRIVACY {{displaySeconds}}
           </span>
-          <span v-else-if="displaySeconds <= 40" class="font-semibold tracking-wide text-slate-200 font-saira-semi-condensed">
-            IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} 3
+          <span v-else-if="displaySeconds <= 40" class="font-semibold tracking-widest text-slate-200 font-saira-semi-condensed">
+            IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} 
           </span>
-          <span v-else-if="displaySeconds <= 50" class="font-normal tracking-wide text-slate-300 font-saira-semi-condensed">
-            IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} 2
+          <span v-else-if="displaySeconds <= 50" class="font-medium tracking-widest text-slate-300 font-saira-semi-condensed">
+            IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} 
           </span>
-          <span v-else-if="displaySeconds > 50" class="font-thin tracking-wide text-slate-300 font-saira-semi-condensed">IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} 1</span>
+          <span v-else-if="displaySeconds > 50" class="font-light tracking-widest text-slate-300 font-saira-semi-condensed">IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} </span>
           <span v-else></span>
         </div>
         <div   v-if="displaySeconds <= 30" class="flex justify-center items-center font-black	timerFont content-center text-slate-100 pt-32">
-          <div class="hours mr-2 relative">
+          <div class="hours mr-2 relative font-extrabold">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
-          <div class="minutes  mx-2 relative">
+          <div class="minutes  mx-2 relative font-extrabold">
             {{ displayMinutes }}
             <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
-          <div class="seconds  mx-2 relative">
-            {{ displaySeconds }} 4
+          <div class="seconds  mx-2 relative font-extrabold">
+            {{ displaySeconds }} 
             <div class="label absolute bottom-0"></div>
           </div>
         </div>
 
         <div v-else-if="displaySeconds <= 40" class="flex justify-center items-center  timerFont content-center text-slate-100 pt-32">
-          <div class="hours mr-2 relative">
+          <div class="hours mr-2 relative font-semibold	">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
-          <div class="minutes  mx-2 relative">
+          <div class="minutes  mx-2 relative font-semibold	">
             {{ displayMinutes }}
             <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
-          <div class="seconds  mx-2 relative">
-            {{ displaySeconds }} 3
+          <div class="seconds  mx-2 relative font-semibold	">
+            {{ displaySeconds }} 
             <div class="label absolute bottom-0"></div>
           </div>
         </div>
 
-        <div v-else-if="displaySeconds <= 50" class="flex justify-center items-center font-normal  timerFont content-center text-slate-100 pt-32">
-          <div class="hours mr-2 relative">
+        <div v-else-if="displaySeconds <= 50" class="flex justify-center items-center timerFont content-center text-slate-100 pt-32">
+          <div class="hours mr-2 relative font-medium">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
-          <div class="minutes  mx-2 relative">
+          <div class="minutes  mx-2 relative font-medium">
             {{ displayMinutes }}
             <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
-          <div class="seconds  mx-2 relative">
-            {{ displaySeconds }} 2
+          <div class="seconds  mx-2 relative font-medium">
+            {{ displaySeconds }} 
             <div class="label absolute bottom-0"></div>
           </div>
         </div>
 
-        <div v-else-if="displaySeconds > 50" class="flex justify-center items-center font-thin timerFont content-center text-slate-100 pt-32">
-          <div class="hours mr-2 relative">
+        <div v-else-if="displaySeconds > 50" class="flex justify-center items-center timerFont content-center text-slate-100 pt-32">
+          <div class="hours mr-2 relative font-light">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
-          <div class="minutes  mx-2 relative">
+          <div class="minutes  mx-2 relative font-light">
             {{ displayMinutes }}
-            <div class="label absolute bottom-0"></div>
+            <div class="label absolute bottom-0 font-light"></div>
           </div>
           <span class="leading-snug">:</span>
-          <div class="seconds  mx-2 relative">
-            {{ displaySeconds }} 1
+          <div class="seconds  mx-2 relative font-light">
+            {{ displaySeconds }} 
             <div class="label absolute bottom-0"></div>
           </div>
         </div>
