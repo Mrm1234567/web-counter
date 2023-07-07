@@ -38,71 +38,71 @@
           <span v-else-if="displaySeconds > 50" class="font-thin tracking-wide text-slate-300 font-saira-semi-condensed">IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} 1</span>
           <span v-else></span>
         </div>
-        <div v-if="displaySeconds <= 30" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
+        <div v-if="displaySeconds <= 30" class="flex justify-center items-center font-[1600]  content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
-            <div class="label text-sm absolute bottom-0"></div>
+            <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
           <div class="minutes  mx-2 relative">
             {{ displayMinutes }}
-            <div class="label text-sm absolute bottom-0"></div>
+            <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
           <div class="seconds  mx-2 relative">
             {{ displaySeconds }} 4
-            <div class="label text-sm absolute bottom-0"></div>
+            <div class="label absolute bottom-0"></div>
           </div>
         </div>
 
-        <div v-else-if="displaySeconds <= 40" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
+        <div v-else-if="displaySeconds <= 40" class="flex justify-center items-center  font-[1200]  content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
-            <div class="label text-sm absolute bottom-0"></div>
+            <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
           <div class="minutes  mx-2 relative">
             {{ displayMinutes }}
-            <div class="label text-sm absolute bottom-0"></div>
+            <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
           <div class="seconds  mx-2 relative">
             {{ displaySeconds }} 3
-            <div class="label text-sm absolute bottom-0"></div>
+            <div class="label absolute bottom-0"></div>
           </div>
         </div>
 
-        <div v-else-if="displaySeconds <= 50" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
+        <div v-else-if="displaySeconds <= 50" class="flex justify-center items-center font-[800]   content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
-            <div class="label text-sm absolute bottom-0"></div>
+            <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
           <div class="minutes  mx-2 relative">
             {{ displayMinutes }}
-            <div class="label text-sm absolute bottom-0"></div>
+            <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
           <div class="seconds  mx-2 relative">
             {{ displaySeconds }} 2
-            <div class="label text-sm absolute bottom-0"></div>
+            <div class="label absolute bottom-0"></div>
           </div>
         </div>
 
-        <div v-else-if="displaySeconds > 50" class="flex justify-center items-center   font-serif source-sans-font content-center text-slate-100 pt-32">
+        <div v-else-if="displaySeconds > 50" class="flex justify-center items-center font-[400]   content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
-            <div class="label text-sm absolute bottom-0"></div>
+            <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
           <div class="minutes  mx-2 relative">
             {{ displayMinutes }}
-            <div class="label text-sm absolute bottom-0"></div>
+            <div class="label absolute bottom-0"></div>
           </div>
           <span class="leading-snug">:</span>
           <div class="seconds  mx-2 relative">
             {{ displaySeconds }} 1
-            <div class="label text-sm absolute bottom-0"></div>
+            <div class="label absolute bottom-0"></div>
           </div>
         </div>
       </div>
