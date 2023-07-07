@@ -38,7 +38,7 @@
           <span v-else-if="displaySeconds > 50" class="font-thin tracking-wide text-slate-300 font-saira-semi-condensed">IGNITING A NEW ERA OF PRIVACY {{displaySeconds}} 1</span>
           <span v-else></span>
         </div>
-        <div v-if="displaySeconds <= 30" class="flex justify-center items-center font-[1600]  content-center text-slate-100 pt-32">
+        <div   v-if="displaySeconds <= 30" class="flex justify-center items-center font-black	timerFont content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
@@ -55,7 +55,7 @@
           </div>
         </div>
 
-        <div v-else-if="displaySeconds <= 40" class="flex justify-center items-center  font-[1200]  content-center text-slate-100 pt-32">
+        <div v-else-if="displaySeconds <= 40" class="flex justify-center items-center  timerFont content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
@@ -72,7 +72,7 @@
           </div>
         </div>
 
-        <div v-else-if="displaySeconds <= 50" class="flex justify-center items-center font-[800]   content-center text-slate-100 pt-32">
+        <div v-else-if="displaySeconds <= 50" class="flex justify-center items-center font-normal  timerFont content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
@@ -89,7 +89,7 @@
           </div>
         </div>
 
-        <div v-else-if="displaySeconds > 50" class="flex justify-center items-center font-[400]   content-center text-slate-100 pt-32">
+        <div v-else-if="displaySeconds > 50" class="flex justify-center items-center font-thin timerFont content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
