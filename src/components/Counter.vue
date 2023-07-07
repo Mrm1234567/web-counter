@@ -8,37 +8,37 @@
   <div v-if="loaded" class="w-[100vw] h-[100vh]">
     <div class="video-container">
 
-      <video class="background-video fit-width" v-if="displaySeconds <= 30" autoplay muted  @ended="die"> 
+      <video class="background-video fit-width" v-if="displayHours <= 72" autoplay loop muted> 
         <!-- Place here the Phase 4 vide link -->
         <source src="../assets/videos/Phase4.mp4" type="video/mp4">
       </video>
-      <video class="background-video fit-width" v-else-if="displaySeconds <= 40" autoplay loop muted>
+      <video class="background-video fit-width" v-else-if="displayHours <= 168" autoplay loop muted>
         <!-- Place here the Phase 3 vide link -->
         <source src="../assets/videos/Phase3.mp4" type="video/mp4" />
       </video>
-      <video class="background-video fit-width" v-else-if="displaySeconds <= 50" autoplay loop muted>
+      <video class="background-video fit-width" v-else-if="displayHours <= 480" autoplay loop muted>
         <!-- Place here the Phase 2 vide link -->
         <source src="../assets/videos/Phase2.mp4" type="video/mp4" />
       </video>
-      <video class="background-video fit-width" v-else-if="displaySeconds > 50" autoplay loop muted>
+      <video class="background-video fit-width" v-else-if="displayHours > 480" autoplay loop muted>
         <!-- Place here the Phase 1 vide link -->
         <source src="../assets/videos/Phase1.mp4" type="video/mp4" />
       </video>
       <div class="text-overlay">
         <div class="text-base flex justify-center content-center mx-auto text-center pt">
-          <span v-if="displaySeconds <= 30" class="font-extrabold tracking-widest text-slate-100 saira-font">
+          <span v-if="displayHours <= 72" class="font-extrabold tracking-widest text-slate-100 saira-font">
             IGNITING A NEW ERA OF PRIVACY
           </span>
-          <span v-else-if="displaySeconds <= 40" class="font-semibold tracking-widest text-slate-200 font-saira-semi-condensed">
+          <span v-else-if="displayHours <= 168" class="font-semibold tracking-widest text-slate-200 font-saira-semi-condensed">
             IGNITING A NEW ERA OF PRIVACY 
           </span>
-          <span v-else-if="displaySeconds <= 50" class="font-medium tracking-widest text-slate-300 font-saira-semi-condensed">
+          <span v-else-if="displayHours <= 480" class="font-medium tracking-widest text-slate-300 font-saira-semi-condensed">
             IGNITING A NEW ERA OF PRIVACY 
           </span>
-          <span v-else-if="displaySeconds > 50" class="font-light tracking-widest text-slate-300 font-saira-semi-condensed">IGNITING A NEW ERA OF PRIVACY </span>
+          <span v-else-if="displayHours > 480" class="font-light tracking-widest text-slate-300 font-saira-semi-condensed">IGNITING A NEW ERA OF PRIVACY </span>
           <span v-else></span>
         </div>
-        <div   v-if="displaySeconds <= 30" class="flex justify-center items-center font-black	timerFont content-center text-slate-100 pt-32">
+        <div v-if="displayHours <= 72" class="flex justify-center items-center font-black	timerFont content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative font-extrabold">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
@@ -55,7 +55,7 @@
           </div>
         </div>
 
-        <div v-else-if="displaySeconds <= 40" class="flex justify-center items-center  timerFont content-center text-slate-100 pt-32">
+        <div v-else-if="displayHours <= 168" class="flex justify-center items-center  timerFont content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative font-semibold	">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
@@ -72,7 +72,7 @@
           </div>
         </div>
 
-        <div v-else-if="displaySeconds <= 50" class="flex justify-center items-center timerFont content-center text-slate-100 pt-32">
+        <div v-else-if="displayHours <= 480" class="flex justify-center items-center timerFont content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative font-medium">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
@@ -89,7 +89,7 @@
           </div>
         </div>
 
-        <div v-else-if="displaySeconds > 50" class="flex justify-center items-center timerFont content-center text-slate-100 pt-32">
+        <div v-else-if="displayHours > 480" class="flex justify-center items-center timerFont content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative font-light">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
@@ -160,8 +160,6 @@ export default {
     displaySeconds: 0,
     loaded: false,
     postVideo: false,
-    test: false,
-    
   }),
   computed: {
     _seconds: () => 1000,
@@ -192,9 +190,7 @@ export default {
         const now = new Date();
         //const end = new Date(2023, 6, 20, 12, 0, 0);
         const distance = this.end.getTime() - now.getTime();
-        // if (distance < 0) {
-        if (this.test) {
-          console.log('fjjfjf');
+        if (distance < 0) {
           //4th phase
           clearInterval(timer);
           this.loaded = false;
@@ -218,10 +214,7 @@ export default {
     this.postVideo = true;
     document.getElementById("1").style.display = "none";
     document.getElementById("2").style.display = "block";
-  },
-  die() {
-    this.test = true;
-  },
+  }
   },
 };
 </script>
