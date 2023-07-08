@@ -91,7 +91,9 @@ video {
   video {
     max-width: 170vh !important;
   }
-
+  .timerFont {
+    font-size: 30px;
+  }
   .spark {
     font-size: 30px !important;
     line-height: 30px !important;
@@ -106,7 +108,9 @@ video {
   video {
     max-width: 180vh !important;
   }
-
+  .timerFont {
+    font-size: 50px;
+  }
   
   .source-sans-font {
     font-size: 75px;
