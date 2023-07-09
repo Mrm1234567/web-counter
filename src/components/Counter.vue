@@ -26,19 +26,19 @@
       </video>
       <div class="text-overlay">
         <div class="text-base flex justify-center content-center mx-auto text-center pt">
-          <span v-if="displayHours <= 72" class="font-extrabold tracking-widest text-slate-100 saira-font">
+          <span v-if="displayHours <= 72" class="font-extrabold text-4xl tracking-widest text-slate-100 saira-font">
             IGNITING A NEW ERA OF PRIVACY
           </span>
-          <span v-else-if="displayHours <= 168" class="font-semibold tracking-widest text-slate-200 font-saira-semi-condensed">
+          <span v-else-if="displayHours <= 168" class="font-semibold text-3xl tracking-widest text-slate-200 font-saira-semi-condensed">
             IGNITING A NEW ERA OF PRIVACY 
           </span>
-          <span v-else-if="displayHours <= 480" class="font-medium tracking-widest text-slate-300 font-saira-semi-condensed">
+          <span v-else-if="displayHours <= 480" class="font-medium text-2xl tracking-widest text-slate-300 font-saira-semi-condensed">
             IGNITING A NEW ERA OF PRIVACY 
           </span>
-          <span v-else-if="displayHours > 480" class="font-light tracking-widest text-slate-300 font-saira-semi-condensed">IGNITING A NEW ERA OF PRIVACY </span>
+          <span v-else-if="displayHours > 480" class="font-light text-lg tracking-widest text-slate-300 font-saira-semi-condensed">IGNITING A NEW ERA OF PRIVACY </span>
           <span v-else></span>
         </div>
-        <div v-if="displayHours <= 72" class="flex justify-center items-center font-black	timerFont content-center text-slate-100 pt-32">
+        <div v-if="displayHours <= 72" class="flex text-9xl justify-center items-center font-black	timerFont content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative font-extrabold">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
@@ -55,7 +55,7 @@
           </div>
         </div>
 
-        <div v-else-if="displayHours <= 168" class="flex justify-center items-center  timerFont content-center text-slate-100 pt-32">
+        <div v-else-if="displayHours <= 168" class="flex text-8xl justify-center items-center  timerFont content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative font-semibold	">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
@@ -72,7 +72,7 @@
           </div>
         </div>
 
-        <div v-else-if="displayHours <= 480" class="flex justify-center items-center timerFont content-center text-slate-100 pt-32">
+        <div v-else-if="displayHours <= 480" class="flex text-7xl justify-center items-center timerFont content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative font-medium">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>
@@ -89,7 +89,7 @@
           </div>
         </div>
 
-        <div v-else-if="displayHours > 480" class="flex justify-center items-center timerFont content-center text-slate-100 pt-32">
+        <div v-else-if="displayHours > 480"  class="flex text-6xl justify-center items-center timerFont content-center text-slate-100 pt-32">
           <div class="hours mr-2 relative font-light">
             {{ displayHours }}
             <div class="label absolute bottom-0"></div>

@@ -20,7 +20,7 @@
 
 .timerFont {
   font-family: 'Source Sans Pro' !important;
-  font-size: 108px;
+  /* font-size: 108px; */
 }
 
 body{
@@ -91,9 +91,9 @@ video {
   video {
     max-width: 170vh !important;
   }
-  .timerFont {
+  /* .timerFont {
     font-size: 30px;
-  }
+  } */
   .spark {
     font-size: 30px !important;
     line-height: 30px !important;
